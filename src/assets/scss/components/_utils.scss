@@ -1,0 +1,68 @@
+//positions
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+//displays
+.d-table {
+  display: table;
+}
+.d-table-cell {
+  @extend .small-12;
+  display: table-cell;
+  vertical-align: middle;
+}
+.d-iblock {
+  display: inline-block;
+}
+
+//margins
+.no-margin {
+  margin: 0;
+}
+
+//fonts
+.primary-color {
+  color: $primary-color;
+}
+
+//gradients
+.violet-gradient {
+  background: -webkit-linear-gradient(90deg, #0a1225 0%, #14305f 100%);
+  background: -moz-linear-gradient(90deg, #0a1225 0%, #14305f 100%);
+  background: -o-linear-gradient(90deg, #0a1225 0%, #14305f 100%);
+  background: -ms-linear-gradient(90deg, #0a1225 0%, #14305f 100%);
+  background: linear-gradient(0deg, #0a1225 0%, #14305f 100%);
+}
+.pink-gradient {
+  background-image: url('../img/bg-banners.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: rem-calc(200);
+  width: 100%;
+  position: absolute;
+  top: rem-calc(59);
+  left: 0;
+  z-index: 0;
+}
+
+//containers
+.section-block {
+  padding-top: rem-calc(30);
+  padding-bottom: rem-calc(30);
+}
+.section-title {
+  h3 {
+    color: $medium-gray;
+    font-size: rem-calc(20);
+    font-variant: small-caps;
+  }
+}

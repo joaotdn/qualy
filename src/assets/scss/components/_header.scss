@@ -1,0 +1,124 @@
+.bg-top {
+  height: rem-calc(220);
+  z-index: 9;
+  border-bottom: 2px solid $white;
+}
+
+#header {
+  z-index: 99;
+  a {
+    color: $white;
+    span {
+      @extend %transition;
+      padding: rem-calc(10);
+      border-radius: 6px;
+    }
+  }
+
+  @include breakpoint(large) {
+    .d-table {
+      height: rem-calc(160);
+    }
+    li {
+      &.current, &:hover {
+        span {
+          background: $black;
+        }
+      }
+      a {
+        line-height: 3.5;
+      }
+    }
+  }
+}
+
+//Menu principal
+#main-menu {
+  display: none;
+
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+
+//Menu mobile
+.btn-mo {
+  line-height: rem-calc(90);
+  div {
+    width: rem-calc(30);
+    height: rem-calc(3);
+    background-color: $white;
+    border-radius: 10px;
+
+    &:not(:first-child) {
+      margin-top: rem-calc(5);
+    }
+  }
+}
+.close-mo-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba($white, .9);
+  @extend .small-12;
+  @extend %full-height;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  @include breakpoint(large) {
+    display: none !important;
+  }
+}
+#mo-menu {
+  width: rem-calc(260);
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  background-color: $black;
+  overflow: auto;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  button {
+    color: $light-gray;
+  }
+
+  h3 {
+    color: $light-gray;
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+    margin: 0;
+  }
+
+  ul {
+    @extend .small-12;
+    margin-top: rem-calc(20);
+  }
+
+  a {
+    display: block;
+    @extend .small-12;
+    @extend .float-left;
+    padding: rem-calc(20);
+    color: $white;
+    border-bottom: 1px dotted $dark-gray;
+  }
+}
+
+@include breakpoint(medium down) {
+  .logo {
+    padding: rem-calc(20);
+    img {
+      width: rem-calc(120);
+    }
+  }
+}

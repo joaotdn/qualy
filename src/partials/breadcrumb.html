@@ -1,0 +1,16 @@
+<nav aria-label="Você está em:" role="navigation" id="breadcrumb">
+    <div class="row">
+        <div class="small-12 columns">
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <span class="show-for-sr">Você está em: </span>
+                    {{#ifpage 'sobre'}}Sobre a Qualy{{/ifpage}}
+                    {{#ifpage 'trabalhe_conosco'}}Trabalhe conosco{{/ifpage}}
+                    {{#ifpage 'contato'}}Fale conosco{{/ifpage}}
+                    {{#ifpage 'produtos'}}Nossos produtos{{/ifpage}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

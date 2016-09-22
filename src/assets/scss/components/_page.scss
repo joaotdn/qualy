@@ -1,0 +1,32 @@
+#breadcrumb {
+  padding: rem-calc(16);
+  background-color: $white;
+  margin-bottom: rem-calc(20);
+  ul {
+    margin: 0;
+  }
+}
+#page-content {
+  min-height: rem-calc(600);
+  background-color: #f1f1f1;
+  position: relative;
+  z-index: 99;
+
+  header {
+    color: $medium-gray;
+  }
+
+  article {
+    > div {
+      padding: rem-calc(20);
+      background-color: $white;
+      margin-bottom: rem-calc(40);
+    }
+  }
+
+  @include breakpoint(large) {
+    header h1 {
+      font-size: rem-calc(32);
+    }
+  }
+}

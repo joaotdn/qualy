@@ -1,0 +1,80 @@
+#ofertas {
+  @extend .rel;
+  figure, img {
+    @extend .small-12;
+    @extend .float-left;
+  }
+
+  .row {
+    > .bars {
+      width: 94%;
+      height: 10%;
+      margin-left: 3%;
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      border-radius: 10px;
+      @extend .show-for-large;
+
+      &.first {
+        top: rem-calc(-8);
+        background-color: #ce2920;
+      }
+
+      &.last {
+        bottom: rem-calc(-8);
+        background-color: #143964;
+      }
+    }
+  }
+
+  nav {
+    @include breakpoint(large) {
+      height: rem-calc(350);
+    }
+  }
+
+}
+.nav-banners {
+  @extend .abs;
+  top: 0;
+  z-index: 9;
+  font-size: rem-calc(100);
+  line-height: rem-calc(320);
+  color: $dark-gray;
+
+  &.next {
+    right: rem-calc(-60);
+  }
+  &.prev {
+    left: rem-calc(-60);
+  }
+
+  @include breakpoint(medium down) {
+    display: none;
+  }
+}
+
+.cycle-pager {
+  position: absolute;
+  bottom: rem-calc(-38);
+  left: 0;
+  z-index: 99;
+  @extend .small-12;
+  @extend .text-center;
+  @extend .hide-for-large;
+
+  span {
+    display: inline-block;
+    width: rem-calc(20);
+    height: rem-calc(20);
+    background-color: $medium-gray;
+    margin: rem-calc(0 5);
+    border-radius: 100%;
+    cursor: pointer;
+
+    &.cycle-pager-active {
+      background-color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<a href="#" class="close-mo-menu" data-show-menu></a>
+<div class="bg-top small-12 abs top-left violet-gradient"></div>
+
+<header id="header" class="small-12 float-left rel">
+    <div class="row">
+        <div class="d-table small-12">
+            <div class="d-table-cell">
+                <figure class="small-8 large-3 columns logo">
+                    <h1>
+                        <a href="index.html" title="Página principal">
+                            <img src="{{root}}assets/img/logo.png" alt="Qualy Móveis">
+                        </a>
+                    </h1>
+                </figure>
+
+                <h2 class="no-margin small-4 columns text-right btn-mo hide-for-large">
+                    <a href="#" title="Mostrar menu" class="d-iblock" data-show-menu>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </a>
+                </h2>
+                
+                <nav id="main-menu" class="small-9 columns large-text-right">
+                    <ul class="menu d-iblock">
+                        <li {{#ifpage 'index'}}class="current"{{/ifpage}}>
+                            <a href="index.html" title="Página principal">
+                                <span>Página principal</span>
+                            </a>
+                        </li>
+                        <li {{#ifpage 'sobre'}}class="current"{{/ifpage}}>
+                            <a href="sobre.html" title="Conheça a Qualy">
+                                <span>Conheça a Qualy</span>
+                            </a>
+                        </li>
+                        <li {{#ifpage 'produtos'}}class="current"{{/ifpage}}>
+                            <a href="produtos.html" title="Produtos">
+                                <span>Produtos</span>
+                            </a>
+                        </li>
+                        <li {{#ifpage 'trabalhe_conosco'}}class="current"{{/ifpage}}>
+                            <a href="trabalhe_conosco.html" title="Trabalhe Conosco">
+                                <span>Trabalhe Conosco</span>
+                            </a>
+                        </li>
+                        <li {{#ifpage 'contato'}}class="current"{{/ifpage}}>
+                            <a href="contato.html" title="Contato">
+                                <span>Contato</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

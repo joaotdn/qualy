@@ -1,0 +1,193 @@
+<section id="page-content" class="small-12 float-left">
+    {{> breadcrumb}}
+    <div class="row">
+
+        {{#unlesspage 'produtos'}}
+        <article class="small-12 large-10 large-offset-2 columns">
+
+            <header>
+                <h1>
+                    {{#ifpage 'sobre'}}Sobre a Qualy{{/ifpage}}
+                    {{#ifpage 'trabalhe_conosco'}}Trabalhe conosco{{/ifpage}}
+                    {{#ifpage 'contato'}}Fale conosco{{/ifpage}}
+                </h1>
+            </header>
+
+            {{#ifpage 'trabalhe_conosco'}}
+            <figure class="small-12 float-left">
+                <img src="{{root}}assets/img/trabalhe.jpg" alt="Trabalhe conosco">
+            </figure>
+            {{/ifpage}}
+
+            <div class="small-12 float-left">
+
+                {{#ifpage 'sobre'}}
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias aut blanditiis consequuntur eos, excepturi magnam maxime mollitia nisi non officiis sapiente, sunt, voluptates! Alias architecto distinctio pariatur praesentium sunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos expedita, ipsa minima neque nesciunt sint suscipit. Ad assumenda deleniti deserunt, dolorum esse minima, minus optio reprehenderit similique tenetur ullam voluptatem?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi consequuntur facilis harum magnam, natus nisi repellendus vel voluptas. Deserunt eaque fugiat neque voluptas. Accusantium animi hic nam nostrum perferendis?</p>
+                {{/ifpage}}
+
+                {{#ifpage 'trabalhe_conosco'}}
+                    <p class="primary-color"><strong>Se você é dedicado, gosta de lidar com pessoas, é eficiente e quer fazer parte de uma equipe sempre em busca de melhores resultados, venha para a QUALY!</strong></p>
+                    <p>
+                        <form action="" method="">
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome">
+                            </div>
+
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="cpf">CPF</label>
+                                <input type="text" name="cpf" id="cpf">
+                            </div>
+
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="nascimento">Data de nascimento</label>
+                                <input type="text" name="nascimento" id="nascimento">
+                            </div>
+
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade" id="cidade">
+                            </div>
+
+                            <div class="form-input small-12 large-6 float-left">
+                                <div class="small-12 large-6 columns">
+                                    <label for="uf">UF</label>
+                                    <input type="text" name="uf" id="uf">
+                                </div>
+
+                                <div class="small-12 large-6 columns">
+                                    <label for="tel">Telefone</label>
+                                    <input type="tel" name="tel" id="tel">
+                                </div>
+                            </div>
+
+                            <div class="form-input small-12 columns">
+                                <label for="exampleFileUpload" class="button-secondary small-12">Currículo (*.pdf ou *.doc)</label>
+                                <input type="file" id="exampleFileUpload" class="small-12">
+                            </div>
+
+                            <div class="form-input small-12 columns">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+                            </div>
+
+                            <div class="form-input small-12 columns text-right">
+                                <button type="submit" class="button">Enviar</button>
+                            </div>
+                        </form>
+                    </p>
+                {{/ifpage}}
+
+                {{#ifpage 'contato'}}
+                <p class="text-center"><strong>Fale conosco através do formulário abaixo. Envie suas dúvidas, críticas e/ou sugestões.<br>Retornaremos o mais breve possível.</strong></p>
+                <p>
+                    <form action="" method="">
+                        <div class="form-input small-12 large-6 columns">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+
+                        <div class="form-input small-12 large-6 columns">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+
+                        <div class="form-input small-12 large-6 columns">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco">
+                        </div>
+
+                        <div class="form-input small-12 large-6 columns">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro">
+                        </div>
+
+                        <div class="form-input small-12 large-6 columns">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" name="cidade" id="cidade">
+                        </div>
+
+                        <div class="form-input small-12 large-6 float-left">
+                            <div class="small-12 large-6 columns">
+                                <label for="uf">UF</label>
+                                <input type="text" name="uf" id="uf">
+                            </div>
+
+                            <div class="small-12 large-6 columns">
+                                <label for="tel">Telefone</label>
+                                <input type="tel" name="tel" id="tel">
+                            </div>
+                        </div>
+
+                        <div class="form-input small-12 columns">
+                            <label for="exampleFileUpload" class="button-secondary small-12">Currículo (*.pdf ou *.doc)</label>
+                            <input type="file" id="exampleFileUpload" class="small-12">
+                        </div>
+
+                        <div class="form-input small-12 columns">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-input small-12 columns text-right">
+                            <button type="submit" class="button">Enviar</button>
+                        </div>
+                    </form>
+                </p>
+                {{/ifpage}}
+
+            </div>
+
+        </article>
+        {{/unlesspage}}
+
+        {{#ifpage 'produtos'}}
+        <nav class="lista-destaques small-12 float-left">
+            <header>
+                <h1>Nossos produtos</h1>
+            </header>
+
+            {{#repeat 8}}
+            <figure class="small-12 medium-4 large-3 columns">
+                <div class="small-12 float-left">
+                    <a href="#" title="" class="d-iblock text-center">
+                        <img src="{{root}}assets/img/media/raque.jpg" alt="">
+                    </a>
+
+                    <figcaption class="small-12 float-left">
+                        <hgroup class="small-12 float-left">
+                            <h2><a href="#" title="">Estante TV Beginnings Pinhao</a></h2>
+                            <h3>168/1221x82821</h3>
+                        </hgroup>
+
+                        <p class="promo">De R$ <span>799,00</span> por</p>
+                        <p class="price">R$ 449,00</p>
+                        <p class="promo">em até 10x de 44,49 sem juros</p>
+                    </figcaption>
+                </div>
+            </figure>
+            {{/repeat}}
+
+            <!--Paginação-->
+            <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                <li class="pagination-previous disabled"><span class="show-for-sr">page</span></li>
+                <li class="current"><span class="show-for-sr"></span> 1</li>
+                <li><a href="#" aria-label="Page 2">2</a></li>
+                <li><a href="#" aria-label="Page 3">3</a></li>
+                <li><a href="#" aria-label="Page 4">4</a></li>
+                <li class="ellipsis" aria-hidden="true"></li>
+                <li><a href="#" aria-label="Page 12">12</a></li>
+                <li><a href="#" aria-label="Page 13">13</a></li>
+                <li class="pagination-next"><a href="#" aria-label="Next page"><span class="show-for-sr">page</span></a></li>
+            </ul>
+        </nav>
+        {{/ifpage}}
+
+    </div>
+</section>
