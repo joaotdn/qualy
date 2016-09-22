@@ -29,52 +29,85 @@
                 {{#ifpage 'trabalhe_conosco'}}
                     <p class="primary-color"><strong>Se você é dedicado, gosta de lidar com pessoas, é eficiente e quer fazer parte de uma equipe sempre em busca de melhores resultados, venha para a QUALY!</strong></p>
                     <p>
-                        <form action="" method="">
-                            <div class="form-input small-12 large-6 columns">
-                                <label for="nome">Nome</label>
-                                <input type="text" name="nome" id="nome">
-                            </div>
-
-                            <div class="form-input small-12 large-6 columns">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email">
-                            </div>
-
-                            <div class="form-input small-12 large-6 columns">
-                                <label for="cpf">CPF</label>
-                                <input type="text" name="cpf" id="cpf">
-                            </div>
-
-                            <div class="form-input small-12 large-6 columns">
-                                <label for="nascimento">Data de nascimento</label>
-                                <input type="text" name="nascimento" id="nascimento">
-                            </div>
-
-                            <div class="form-input small-12 large-6 columns">
-                                <label for="cidade">Cidade</label>
-                                <input type="text" name="cidade" id="cidade">
-                            </div>
-
-                            <div class="form-input small-12 large-6 float-left">
-                                <div class="small-12 large-6 columns">
-                                    <label for="uf">UF</label>
-                                    <input type="text" name="uf" id="uf">
+                        <form action="" method="" data-abide novalidate>
+                            <div class="small-12 float-left">
+                                <div class="form-input small-12 large-6 columns">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" name="nome" id="nome" required pattern="alpha">
+                                    <span class="form-error">
+                                      Obrigatório (Apenas letras)
+                                    </span>
                                 </div>
 
-                                <div class="small-12 large-6 columns">
-                                    <label for="tel">Telefone</label>
-                                    <input type="tel" name="tel" id="tel">
+                                <div class="form-input small-12 large-6 columns">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" required pattern="email">
+                                    <span class="form-error">
+                                      Obrigatório (formato de email inválido)
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="small-12 float-left">
+                                <div class="form-input small-12 large-6 columns">
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" name="cpf" id="cpf" class="cpf" required>
+                                    <span class="form-error">
+                                      Obrigatório
+                                    </span>
+                                </div>
+
+                                <div class="form-input small-12 large-6 columns">
+                                    <label for="nascimento">Data de nascimento</label>
+                                    <input type="text" name="nascimento" id="nascimento" class="date" required>
+                                    <span class="form-error">
+                                      Obrigatório
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="small-12 float-left">
+                                <div class="form-input small-12 large-6 columns">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" name="cidade" id="cidade" maxlength="80" required>
+                                    <span class="form-error">
+                                      Obrigatório
+                                    </span>
+                                </div>
+
+                                <div class="form-input small-12 large-6 float-left">
+                                    <div class="small-12 large-6 columns">
+                                        <label for="uf">UF</label>
+                                        <input type="text" name="uf" id="uf" maxlength="20" required>
+                                        <span class="form-error">
+                                          Obrigatório
+                                        </span>
+                                    </div>
+
+                                    <div class="small-12 large-6 columns">
+                                        <label for="tel">Telefone</label>
+                                        <input type="tel" name="tel" id="tel" class="phone_with_ddd" required>
+                                        <span class="form-error">
+                                          Obrigatório
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-input small-12 columns">
                                 <label for="exampleFileUpload" class="button-secondary small-12">Currículo (*.pdf ou *.doc)</label>
-                                <input type="file" id="exampleFileUpload" class="small-12">
+                                <input type="file" id="exampleFileUpload" class="small-12" required>
+                                <span class="form-error">
+                                          Obrigatório
+                                        </span>
                             </div>
 
                             <div class="form-input small-12 columns">
                                 <label for="mensagem">Mensagem</label>
-                                <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+                                <textarea name="mensagem" id="mensagem" cols="30" rows="5" required></textarea>
+                                <span class="form-error">
+                                          Obrigatório
+                                        </span>
                             </div>
 
                             <div class="form-input small-12 columns text-right">
@@ -87,52 +120,77 @@
                 {{#ifpage 'contato'}}
                 <p class="text-center"><strong>Fale conosco através do formulário abaixo. Envie suas dúvidas, críticas e/ou sugestões.<br>Retornaremos o mais breve possível.</strong></p>
                 <p>
-                    <form action="" method="">
-                        <div class="form-input small-12 large-6 columns">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="nome">
-                        </div>
-
-                        <div class="form-input small-12 large-6 columns">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-
-                        <div class="form-input small-12 large-6 columns">
-                            <label for="endereco">Endereço</label>
-                            <input type="text" name="endereco" id="endereco">
-                        </div>
-
-                        <div class="form-input small-12 large-6 columns">
-                            <label for="bairro">Bairro</label>
-                            <input type="text" name="bairro" id="bairro">
-                        </div>
-
-                        <div class="form-input small-12 large-6 columns">
-                            <label for="cidade">Cidade</label>
-                            <input type="text" name="cidade" id="cidade">
-                        </div>
-
-                        <div class="form-input small-12 large-6 float-left">
-                            <div class="small-12 large-6 columns">
-                                <label for="uf">UF</label>
-                                <input type="text" name="uf" id="uf">
+                    <form action="" method="" data-abide novalidate>
+                        <div class="small-12 float-left">
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome" required pattern="alpha">
+                                <span class="form-error">
+                                              Obrigatório (Apenas letras)
+                                            </span>
                             </div>
 
-                            <div class="small-12 large-6 columns">
-                                <label for="tel">Telefone</label>
-                                <input type="tel" name="tel" id="tel">
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required pattern="email">
+                                <span class="form-error">
+                                              Obrigatório (formato de email inválido)
+                                            </span>
                             </div>
                         </div>
 
-                        <div class="form-input small-12 columns">
-                            <label for="exampleFileUpload" class="button-secondary small-12">Currículo (*.pdf ou *.doc)</label>
-                            <input type="file" id="exampleFileUpload" class="small-12">
+                        <div class="small-12 float-left">
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" name="endereco" id="endereco" maxlength="250" required>
+                                <span class="form-error">
+                                              Obrigatório
+                                            </span>
+                            </div>
+
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" name="bairro" id="bairro" maxlength="250" required>
+                                <span class="form-error">
+                                              Obrigatório
+                                            </span>
+                            </div>
+                        </div>
+
+                        <div class="small-12 float-left">
+                            <div class="form-input small-12 large-6 columns">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" name="cidade" id="cidade" maxlength="80" required>
+                                <span class="form-error">
+                                              Obrigatório
+                                            </span>
+                            </div>
+
+                            <div class="form-input small-12 large-6 float-left">
+                                <div class="small-12 large-6 columns">
+                                    <label for="uf">UF</label>
+                                    <input type="text" name="uf" id="uf" maxlength="20" required>
+                                    <span class="form-error">
+                                                  Obrigatório
+                                                </span>
+                                </div>
+
+                                <div class="small-12 large-6 columns">
+                                    <label for="tel">Telefone</label>
+                                    <input type="tel" name="tel" id="tel" class="phone_with_ddd" required>
+                                    <span class="form-error">
+                                                  Obrigatório
+                                                </span>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-input small-12 columns">
                             <label for="mensagem">Mensagem</label>
-                            <textarea name="mensagem" id="mensagem" cols="30" rows="5"></textarea>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="5" required></textarea>
+                            <span class="form-error">
+                                                  Obrigatório
+                                                </span>
                         </div>
 
                         <div class="form-input small-12 columns text-right">

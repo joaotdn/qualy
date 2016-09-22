@@ -33,13 +33,14 @@ PATHS:
     - "bower_components/what-input/what-input.js"
     - "bower_components/jquery-cycle2/build/jquery.cycle2.js"
     - "bower_components/jquery-cycle2/build/plugin/jquery.cycle2.swipe.min.js"
+    - "bower_components/jquery-mask-plugin/dist/jquery.mask.js"
     # Core Foundation files
     - "bower_components/foundation-sites/js/foundation.core.js"
     - "bower_components/foundation-sites/js/foundation.util.*.js"
 
     # Individual Foundation components
     # If you aren't using a component, just remove it from the list
-    # "bower_components/foundation-sites/js/foundation.abide.js"
+    - "bower_components/foundation-sites/js/foundation.abide.js"
     # "bower_components/foundation-sites/js/foundation.accordion.js"
     # "bower_components/foundation-sites/js/foundation.accordionMenu.js"
     # "bower_components/foundation-sites/js/foundation.drilldown.js"
